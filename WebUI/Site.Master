@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebUI.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Mi aplicación ASP.NET</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+     <link rel="stylesheet" type="text/css" href="StyleMaster/css/component.css"/>
+    <script src="StyleMaster/js/modernizr.custom.js"></script>
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--Para obtener más información sobre cómo agrupar scripts en ScriptManager, consulte http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Scripts de marco--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Scripts del sitio--%>
+            </Scripts>
+        </asp:ScriptManager>
+ <div class="navbar navbar-inverse navbar-fixed-top">
+            
+            <div class="container">
+            <ul id="gn-menu" class="gn-menu-main">
+                <li class="gn-trigger"> 
+                      <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+               <nav class="gn-menu-wrapper">
+                  <div class="gn-scroller">
+                      <ul class="gn-menu">
+
+					  <li><img src="StyleMaster/icons/01.png" />  <a href="WebForm1">  Notas              </a></li>
+					  <li><img src="StyleMaster/icons/02.png" />  <a href="WebForm2">  Cursos Asginados   </a></li>
+					  <li><img src="StyleMaster/icons/03.png" />  <a href="#">         Horarios           </a></li>
+					  <li><img src="StyleMaster/icons/04.png" />  <a href="#">         Reportes           </a></li>
+					  <li><img src="StyleMaster/icons/05.png" />  <a href="#">         Encargado          </a></li>
+					  </ul>
+                </div>
+               
+               </nav>
+                </li> 
+                       <li><a href="WebFormHome">Colegio ABC</a></li>
+      	               <li><a  href="#"><span>Cerrar Sesion</span></a></li>
+              </ul>
+        </div>
+
+
+
+        </div>
+        
+        
+        
+       
+        <div class="container body-content">
+            
+             <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - Colegio ABC</p>
+            </footer>
+                  </asp:ContentPlaceHolder>
+        </div>
+           
+    </form>
+</body>
+    <script src="StyleMaster/js/classie.js"></script>
+    <script src="StyleMaster/js/gnmenu.js"></script>
+     <script>new gnMenu( document.getElementById( 'gn-menu' ) );</script>
+</html>
