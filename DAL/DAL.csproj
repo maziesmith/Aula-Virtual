@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSetEmpleado.cs">
+      <DependentUpon>DataSetEmpleado.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetEmpleado.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

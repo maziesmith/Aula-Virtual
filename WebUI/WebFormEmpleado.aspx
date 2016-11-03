@@ -131,9 +131,10 @@
             </div>
         </div>
          <div class="form-group">
-            <asp:Label runat="server" CssClass="col-md-2 control-label">Salario Base</asp:Label>
+            <asp:Label runat="server" CssClass="col-md-2 control-label">Tipo de Empleado</asp:Label>
             <div class="col-md-10">
-            <asp:DropDownList ID="ddlTipoEmpleado" runat="server"></asp:DropDownList>
+          <asp:DropDownList ID="ddlTipoEmpleado" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+        </asp:DropDownList>
             </div>
         </div>
 
@@ -142,6 +143,8 @@
     <div class="Usuario">
         <h4>Usuario</h4>
         <hr/>
+       
+        
        
         <div class="form-group">
             <asp:Label runat="server" CssClass="col-md-2 control-label">Usuario</asp:Label>
@@ -158,16 +161,16 @@
         </div>
 
           <div class="form-group">
-            <asp:Label runat="server" CssClass="col-md-2 control-label">Salario Base</asp:Label>
+            <asp:Label runat="server" CssClass="col-md-2 control-label">Rol</asp:Label>
             <div class="col-md-10">
-            <asp:DropDownList ID="ddlRol" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="ddlRol" runat="server">
+                </asp:DropDownList>
             </div>
         </div>
 
         <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-        
-            <asp:Button ID="btnRegistrar" runat="server" OnClick="Button1_Click" Text="Registrar"  class="btn btn-default" />
+        <asp:Button ID="btnRegistrar" runat="server" OnClick="Button1_Click" Text="Registrar"  class="btn btn-default" />
         </div>
         </div>
          

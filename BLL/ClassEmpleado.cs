@@ -14,6 +14,8 @@ namespace BLL
         private EmpleadoTableAdapter empleado = new EmpleadoTableAdapter();
         private PersonaTableAdapter persona = new PersonaTableAdapter();
         private UsuarioTableAdapter usuario = new UsuarioTableAdapter();
+        private RolTableAdapter rol = new RolTableAdapter();
+        private Tipo_empleadoTableAdapter tipoempleado = new Tipo_empleadoTableAdapter();
         //propiedades
         private EmpleadoTableAdapter EMPLEADO
         {
@@ -45,7 +47,35 @@ namespace BLL
                 return usuario;
             }
         }
+        private RolTableAdapter ROL
+        {
+            get
+            {
+                if (rol == null)
+                    rol = new RolTableAdapter();
+                return rol;
+            }
+        }
+        private Tipo_empleadoTableAdapter TIPOEMPLEADO
+        {
+            get
+            {
+                if (tipoempleado == null)
+                    tipoempleado = new Tipo_empleadoTableAdapter();
+                return tipoempleado;
+            }
+        }
+        //metodos
 
+
+        public DataTable ListaRol()
+        {
+            return ROL.GetDataRol();
+        }
+        public DataTable ListaTipoEmpleado()
+        {
+            return TIPOEMPLEADO.GetDataTipoEmpleado();
+        }
         private int NuevaPersona(string nombre, string apellido, string telefono,string direccion, DateTime fecha_nacimiento)
         {
             int? idPersona = 0;

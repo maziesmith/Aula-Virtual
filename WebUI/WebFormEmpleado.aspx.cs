@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using System.Data;
 using BLL;
 namespace WebUI
 {
@@ -12,9 +12,34 @@ namespace WebUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            llenardroplist();
         }
 
+        public void llenardroplist()
+        {
+            ClassEmpleado listas = new ClassEmpleado();
+            DataTable rol = listas.ListaRol();
+            DataTable tipoe = listas.ListaTipoEmpleado();
+
+
+           if (!IsPostBack)
+            {
+                ddlRol.DataSource = rol;
+                ddlRol.DataValueField = rol.Columns[0].ToString();
+                ddlRol.DataTextField = rol.Columns[1].ToString();
+                ddlRol.DataBind();
+
+                ddlTipoEmpleado.DataSource = tipoe;
+                ddlTipoEmpleado.DataValueField = tipoe.Columns[0].ToString();
+                ddlTipoEmpleado.DataTextField = tipoe.Columns[1].ToString();
+                ddlTipoEmpleado.DataBind();      
+            }
+          
+
+
+
+
+        }
         protected void Button1_Click(object sender, EventArgs e)
         {
             ClassEmpleado empleado = new ClassEmpleado();
@@ -28,6 +53,21 @@ namespace WebUI
 
                 throw;
             }
+        }
+
+        protected void ddlTipoEmpleado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void ddlRol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
