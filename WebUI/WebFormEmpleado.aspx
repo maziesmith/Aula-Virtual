@@ -172,10 +172,6 @@
         <div class="col-md-offset-2 col-md-10">
         <asp:Button ID="btnRegistrar" runat="server" OnClick="Button1_Click" Text="Registrar"  class="btn btn-default" />
         </div>
-        </div>
-         
+        </div>        
     </div>
-
-    
-
 </asp:Content>
