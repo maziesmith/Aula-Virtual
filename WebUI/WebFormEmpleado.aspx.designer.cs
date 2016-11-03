@@ -112,6 +112,15 @@ namespace WebUI {
         protected global::System.Web.UI.WebControls.TextBox txtFechaContratacion;
         
         /// <summary>
+        /// Control ddlTipoEmpleado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlTipoEmpleado;
+        
+        /// <summary>
         /// Control txtNombreU.
         /// </summary>
         /// <remarks>
@@ -130,12 +139,21 @@ namespace WebUI {
         protected global::System.Web.UI.WebControls.TextBox txtContraseña;
         
         /// <summary>
-        /// Control DropDownList1.
+        /// Control ddlRol.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlRol;
+        
+        /// <summary>
+        /// Control btnRegistrar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRegistrar;
     }
 }

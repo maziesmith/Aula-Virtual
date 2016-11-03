@@ -130,6 +130,12 @@
                 
             </div>
         </div>
+         <div class="form-group">
+            <asp:Label runat="server" CssClass="col-md-2 control-label">Salario Base</asp:Label>
+            <div class="col-md-10">
+            <asp:DropDownList ID="ddlTipoEmpleado" runat="server"></asp:DropDownList>
+            </div>
+        </div>
 
     </div>
 
@@ -154,13 +160,14 @@
           <div class="form-group">
             <asp:Label runat="server" CssClass="col-md-2 control-label">Salario Base</asp:Label>
             <div class="col-md-10">
-            <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
+            <asp:DropDownList ID="ddlRol" runat="server"></asp:DropDownList>
             </div>
         </div>
 
         <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-        <input type="submit" class="btn btn-default" value="Register" />
+        
+            <asp:Button ID="btnRegistrar" runat="server" OnClick="Button1_Click" Text="Registrar"  class="btn btn-default" />
         </div>
         </div>
          
